@@ -7,3 +7,7 @@ Building & Running
 > mvn clean test 
 
 > mvn clean test -Dversion.jbossws-cxf-client=5.1.3.Final
+
+Project site
+-------------------
+http://rsvoboda.github.io/deptree/
