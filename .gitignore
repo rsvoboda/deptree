@@ -1,1 +1,25 @@
-/target/
+# ignore .svn metadata files
+.svn
+# ignore Maven generated target folders
+target
+# ignore eclipse files
+.project
+.classpath
+.settings
+.metadata
+.checkstyle
+# ignore m2e annotation processing files
+.factorypath
+# ignore IDEA files
+*.iml
+*.ipr
+*.iws
+.idea
+# ignore NetBeans files
+nbactions.xml
+nb-configuration.xml
+catalog.xml
+# vim files
+*.swp
+# temp files
+*~
