@@ -38,6 +38,7 @@
                         </goals>
                         <configuration>
                             <outputFile>target/dependency-tree.txt</outputFile>
+                            <scope>compile</scope>
                         </configuration>
                     </execution>
                 </executions>
