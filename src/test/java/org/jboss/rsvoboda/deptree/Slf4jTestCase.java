@@ -23,6 +23,7 @@ package org.jboss.rsvoboda.deptree;
 
 import java.io.FileReader;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public final class Slf4jTestCase {
@@ -37,11 +38,22 @@ public final class Slf4jTestCase {
         
     /**
      * slf4j is excluded by upstream, it is causing problems for wsi ts too
-     * @throws Exception 
+     * @throws Exception
      */
     @Test
+    @Ignore("Not relevant since https://issues.jboss.org/browse/JBWS-3977")
     public void testNoSlf4j() throws Exception {
         Visitor visitor = new UnexpectedGroupIdVisitor("org.slf4j");
+        visitor.visit(tree);
+    }
+
+    /**
+     * Check slf4j dependencies valid since since https://issues.jboss.org/browse/JBWS-3977"
+     * @throws Exception
+     */
+    @Test
+    public void testSlf4j() throws Exception {
+        Visitor visitor = new ExplicitGroupIdAndArtifactIdsVisitor("org.slf4j", "slf4j-log4j12", "slf4j-api");
         visitor.visit(tree);
     }
 }
