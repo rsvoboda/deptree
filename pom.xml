@@ -80,6 +80,21 @@
                 </dependency>
             </dependencies>
         </profile>
+        <profile>
+            <id>depgraph</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.ferstl</groupId>
+                        <artifactId>depgraph-maven-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <configuration>
+                            <createImage>true</createImage>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
 </project>
