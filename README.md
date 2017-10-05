@@ -4,9 +4,11 @@ Maven project which generates dependency tree text file which is analyzed in tes
 
 Building & Running
 -------------------
-> mvn clean test 
+> mvn -Pcxf clean test 
 
-> mvn clean test -Dversion.jbossws-cxf-client=5.1.3.Final
+> mvn -Pcxf clean test -Dversion.jbossws-cxf-client=5.1.9.Final
+
+> mvn -Pwf test -Dtest=AggregatedDetailsTestCase
 
 Project site
 -------------------
